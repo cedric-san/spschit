@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './Login.module.css';
 import Card from '../Cards/Card';
 import Button from '../Button/Button';
 
 const Login = () => {
+  const [userName, setUserName] = useState('123');
+  const [password, setPassword] = useState('');
+
+  const changeUserNameHandler = (event) => {
+    setUserName(event.target.value);
+  };
+  const changePasswordHandler = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <Card className={classes.input}>
-      <form>
+      <form onSubmit={submitHandler}>
         <label>User Name</label>
-        <input />
+        <input
+          name="username"
+          value={userName}
+          onChange={changeUserNameHandler}
+        />
         <label>Password </label>
-        <input />
+        <input
+          name="password"
+          value={password}
+          onChange={changePasswordHandler}
+        />
         <Button>Login</Button>
       </form>
     </Card>

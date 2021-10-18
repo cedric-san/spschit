@@ -5,7 +5,7 @@ import Member from './Component/Members/Member';
 
 export default function App() {
   return (
-    <div>
+    <div className="app">
       <NavBar />
     </div>
   );
