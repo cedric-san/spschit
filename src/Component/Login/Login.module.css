@@ -1,6 +1,7 @@
 .input {
-  margin-top: 6rem;
-  margin-left: 60rem;
+  position: relative;
+  margin: 0 auto;
+  top: 125px;
   width: 60%;
   padding: 1rem;
   max-width: 20rem;
